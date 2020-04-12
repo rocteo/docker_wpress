@@ -26,6 +26,7 @@ services:
             - '9000:9000'
         volumes:
             - ./www:/var/www/html
+            - ./uploads.ini:/usr/local/etc/php/conf.d/uploads.ini #挂载设置php上传限制的uploads.ini文件
         environment:
             - WORDPRESS_DB_NAME=wordpress
             - WORDPRESS_TABLE_PREFIX=wp_
